@@ -1,6 +1,6 @@
-const userModel = require('./userModel'); // Import the User model
-const passwordModel = require('./passwordModel'); // Import the Password model
-
+// const userModel = require('./userModel'); // Import the User model
+const passwordModel = require('../models/passwordModel'); // Import the Password model
+const pass = require('generate-password');
 
 const passwordManger = async (req, res) => {
     try {
@@ -23,4 +23,16 @@ const getPasswords = async (req, res) => {
     }
 }
 
-module.exports = {passwordManger, getPasswords}
+const generatePassword = async (req,res)=>{
+    try {
+        var password = pass.generate({
+            length: 8,
+            numbers: true,
+        });
+        res.status(201).json(password)
+    } catch (error) {
+        return res.status(500).json(error.message);
+    }
+}
+module.exports = {passwordManger, getPasswords,generatePassword}
+
