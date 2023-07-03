@@ -1,0 +1,80 @@
+.contact{
+    height: 80vh;
+}
+.contact img{
+    width: 100%;
+    height: 84vh;
+    object-fit: cover;
+}
+
+.conact-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    bottom: 30rem;
+    background-color: transparent;
+}
+
+.conact-body h1{
+    color: #fff;
+}
+
+.contact .message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 28rem;
+    background-color: transparent;
+}
+
+.contact .message form input, select{
+    width: 20vw;
+    padding: 10px;
+    height: 7vh;
+    border: none;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.contact .message form button{
+    border: none;
+    cursor: pointer;
+    background-color: var(--header);
+    padding: 13px 100px;
+    border-radius: 20px;
+}
+
+.contact .message form button:hover{
+    background-color: #a673ff;
+}
+
+.contact .message form textarea{
+    border: none;
+    resize: none;
+    width: 20vw;
+    height: 15vh;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cont-row-1{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cont-row-2{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.main-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

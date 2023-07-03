@@ -1,0 +1,52 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: large;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 8vw;
+    height: 12vh;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 10px;
+}
+
+.gen h5 {
+    border: 0.2rem solid var(--header);
+    padding: 8px 30px;
+    border-radius: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user-info span {
+    margin-right: 10px;
+}
+
+.user-info button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: var(--red);
+    font-weight: bold;
+    font-size: large;
+    cursor: pointer;
+}

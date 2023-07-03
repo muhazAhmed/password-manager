@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Belanosima', sans-serif;
+    letter-spacing: 1px;
+    background-color: var(--main);
+    color: #fff;
+}
+
+/* Colors  */
+:root {
+    --main: #141414;
+    --header: #985EFF;
+    --gray: #d7d7d7;
+    --red: #E31A34;
+    --shadow: #999999;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.app h1{
+    color: var(--header);
+}
+.error p{
+    color: var(--red);
+}
+
+button:disabled,
+button[disabled] {
+    cursor: not-allowed;
+}
+
+button[disabled]:hover {
+    border: none;
+    background-color: #cccccc;
+    cursor: not-allowed;
+}

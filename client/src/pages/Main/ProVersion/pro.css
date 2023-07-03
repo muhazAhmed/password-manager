@@ -1,0 +1,84 @@
+.subscription{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.first-line{
+    font-size: 2rem;
+}
+
+.subscription .sec-line h3{
+    font-weight: 300;
+}
+
+.outer-div{
+    display: flex;
+    gap: 2rem;
+}
+.subscription .xtra-div{
+    position: relative;
+    top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--header);
+    padding: 40px 34px;
+    border-radius: 12px;
+}
+
+.subscription .xtra-div .plan-data{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    background-color: transparent;
+}
+
+.subscription .xtra-div .plan-data h3{
+    color: #fff;
+    font-weight: 200;
+}
+
+.subscription .xtra-div .plan-data button{
+    background-color: #fff;
+    padding: 13px 30px;
+    border: none;
+    color: var(--header);
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.subscription .xtra-div .plan-data button:hover{
+    background-color: #dcdcdc;
+}
+
+.subscription .xtra-div .price-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 12px;
+    position: relative;
+    bottom : 100px;
+}
+
+.subscription .xtra-div h1{
+    background-color: transparent;
+    color: black;
+    font-weight: 500;
+}
+
+.subscription .xtra-div h2{
+    background-color: transparent;
+    color: black;
+    font-weight: 500;
+}
+
+.subscription .xtra-div h3{
+    background-color: transparent;
+}
