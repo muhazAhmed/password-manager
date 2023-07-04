@@ -29,7 +29,7 @@ function App() {
         {/* =======ProtectedRoute============ */}
 
         <Route path='/user/dashboard' element={<ProtectedRoute><Dashboard/></ProtectedRoute>} />
-        <Route path='/user/pass-generate' element={<ProtectedRoute><PasswordGenerator/></ProtectedRoute>} />
+        <Route path='/user/pass-generate' element={<PasswordGenerator/>} />
         <Route path='/user/profile/:id/:userName' element={<ProtectedRoute><Profile/></ProtectedRoute>} />
         {/* <Route path='/user/settings/:id' element={<ProtectedRoute><Settings/></ProtectedRoute>} /> */}
 
