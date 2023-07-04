@@ -7,7 +7,7 @@ const passwordSchema = new mongoose.Schema({
     ref: 'User',
     required: true
   },
-  passwordManager: {
+  siteName: {
     type: String,
     required: true
   },

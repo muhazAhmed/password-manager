@@ -30,15 +30,15 @@ const PasswordGenerator = () => {
     <div className="pass-body">
     <div><h1>Password Generator</h1></div>
     <div className="out-pass">
-        <h1></h1>
+        <h2> Generated Password : {data}</h2>
     </div>
       <div className="slider">
-        <span className="min">4</span><input id="slider" name="length" type="range" min="4" max="24"value={length}
+        <span className="min">4</span><input id="slider" name="length" type="range" min="4" max="24" value={length}
           onChange={(e) => setLength(parseInt(e.target.value))} /><span className="max">24</span> <p>Password Lenght : {length}</p>
       </div>
       <div className="toggle-buttons">
         <label>
-          <span>Include UpperCase Case</span>
+          <span>Include Upper Case</span>
           <ToggleSwitch
             checked={upperCase}
             onChange={(e) => {
@@ -47,7 +47,7 @@ const PasswordGenerator = () => {
           />
         </label>
         <label>
-          <span>Include LowerCase Case</span>
+          <span>Include Lower Case</span>
           <ToggleSwitch
             checked={lowerCase}
             onChange={(e) => {
@@ -77,6 +77,7 @@ const PasswordGenerator = () => {
       <div className="gen-btn">
         <button onClick={handleSubmit}>Generate Password</button>
       </div>
+      {error&& <p>{error}</p>}
     </div>
   );
 };

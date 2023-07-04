@@ -16,7 +16,7 @@ const usePostAPI = () => {
 
     try {
       const res = await axios.post(API_URL + url, inputs);
-      setData(res.data.data);
+      setData(res.data);
       setError(null);
     } catch (err) {
       setError(err.response.data);

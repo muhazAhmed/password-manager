@@ -5,7 +5,7 @@ const pass = require("generate-password");
 const passwordManger = async (req, res) => {
   try {
     let data = req.body;
-    let { userId, password } = data;
+    let { userId, siteName, password } = data;
 
     const savedData = await passwordModel.create(data);
     return res.status(201).json({ data: savedData });
@@ -52,7 +52,6 @@ const generatePassword = async (req, res) => {
         obj.symbols = true;
         var password = pass.generate(obj);
     }
-    console.log(password);
     res.status(201).json(password);
   } catch (error) {
     console.log(error.message)
