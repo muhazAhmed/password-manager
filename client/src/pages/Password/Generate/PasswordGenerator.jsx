@@ -10,7 +10,7 @@ const PasswordGenerator = () => {
   const [length, setLength] = useState(4);
   const [upperCase, setUpperCase] = useState(false);
   const [lowerCase, setLowerCase] = useState(false);
-  const [number, setNumber] = useState(false);
+  const [numbers, setNumbers] = useState(false);
   const [specialChar, setSpecialChar] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -19,7 +19,7 @@ const PasswordGenerator = () => {
       length : length,
       upperCase: upperCase,
       lowerCase: lowerCase,
-      number: number,
+      numbers: numbers,
       specialChar: specialChar
     };
 
@@ -34,11 +34,11 @@ const PasswordGenerator = () => {
     </div>
       <div className="slider">
         <span className="min">4</span><input id="slider" name="length" type="range" min="4" max="24"value={length}
-          onChange={(e) => setLength(parseInt(e.target.value))} /><span className="max">24</span>
+          onChange={(e) => setLength(parseInt(e.target.value))} /><span className="max">24</span> <p>Password Lenght : {length}</p>
       </div>
       <div className="toggle-buttons">
         <label>
-          <span>Include UpperCasecase</span>
+          <span>Include UpperCase Case</span>
           <ToggleSwitch
             checked={upperCase}
             onChange={(e) => {
@@ -47,7 +47,7 @@ const PasswordGenerator = () => {
           />
         </label>
         <label>
-          <span>Include LowerCasecase</span>
+          <span>Include LowerCase Case</span>
           <ToggleSwitch
             checked={lowerCase}
             onChange={(e) => {
@@ -58,14 +58,14 @@ const PasswordGenerator = () => {
         <label>
           <span>Include Number</span>
           <ToggleSwitch
-            checked={number}
+            checked={numbers}
             onChange={(e) => {
-              setNumber(e);
+              setNumbers(e);
             }}
           />
         </label>
         <label>
-          <span>Include specialChar</span>
+          <span>Include Special Charecters</span>
           <ToggleSwitch
             checked={specialChar}
             onChange={(e) => {

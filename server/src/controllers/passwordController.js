@@ -24,7 +24,7 @@ const getPasswords = async (req, res) => {
 const generatePassword = async (req, res) => {
   try {
     let obj = {length:req.body.length};
-    if (req.body.number == true) {
+    if (req.body.numbers == true) {
       obj.numbers = true;
     }
     if (req.body.upper == false) {
@@ -33,10 +33,11 @@ const generatePassword = async (req, res) => {
     if (req.body.lower == false) {
       obj.lowercase = false;
     }
-    if (req.body.symbol == true) {
+    if (req.body.specialChar == true) {
       obj.symbols = true;
     }
     var password = pass.generate(obj);
+    console.log(password)
     res.status(201).json(password);
   } catch (error) {
     return res.status(500).json(error.message);
