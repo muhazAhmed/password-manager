@@ -23,23 +23,39 @@ const getPasswords = async (req, res) => {
 
 const generatePassword = async (req, res) => {
   try {
+    let data = req.body;
+    let {numbers, upperCase, lowerCase, specialChar} = data;
     let obj = {length:req.body.length};
-    if (req.body.numbers == true) {
-      obj.numbers = true;
+    if (
+      numbers === true ||
+      upperCase === true ||
+      lowerCase === true ||
+      specialChar === true
+    ) {
+      if (req.body.numbers == true) {
+        obj.numbers = true;
+      }
+      if (req.body.upperCase == false) {
+        obj.uppercase = false;
+      }
+      if (req.body.lowerCase == false) {
+        obj.lowercase = false;
+      }
+      if (req.body.specialChar == true) {
+        obj.symbols = true;
+      }
+      var password = pass.generate(obj);
     }
-    if (req.body.upper == false) {
-      obj.uppercase = false;
+    
+    if (numbers === false && upperCase === false && lowerCase === false && specialChar === false) {
+        obj.numbers = true;
+        obj.symbols = true;
+        var password = pass.generate(obj);
     }
-    if (req.body.lower == false) {
-      obj.lowercase = false;
-    }
-    if (req.body.specialChar == true) {
-      obj.symbols = true;
-    }
-    var password = pass.generate(obj);
-    console.log(password)
+    console.log(password);
     res.status(201).json(password);
   } catch (error) {
+    console.log(error.message)
     return res.status(500).json(error.message);
   }
 };
