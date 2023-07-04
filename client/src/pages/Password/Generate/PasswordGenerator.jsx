@@ -2,12 +2,30 @@ import React, { useState } from "react";
 import "./generator.css";
 import { ToggleSwitch } from "react-dragswitch";
 import "react-dragswitch/dist/index.css";
+import usePostAPI from "../../../util/util.services";
+import { ServerVariables } from "../../../util/ServerVariables";
 
 const PasswordGenerator = () => {
-  const [upper, setUpper] = useState(false);
-  const [lower, setLower] = useState(false);
+  const { data, error, loading, postData } = usePostAPI();
+  const [length, setLength] = useState(4);
+  const [upperCase, setUpperCase] = useState(false);
+  const [lowerCase, setLowerCase] = useState(false);
   const [number, setNumber] = useState(false);
-  const [symbol, setSymbol] = useState(false);
+  const [specialChar, setSpecialChar] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const inputs = {
+      length : length,
+      upperCase: upperCase,
+      lowerCase: lowerCase,
+      number: number,
+      specialChar: specialChar
+    };
+
+    await postData(ServerVariables.Generate, inputs);
+  };
+
   return ( 
     <div className="pass-body">
     <div><h1>Password Generator</h1></div>
@@ -15,24 +33,25 @@ const PasswordGenerator = () => {
         <h1></h1>
     </div>
       <div className="slider">
-        <span className="min">4</span><input id="slider" type="range" min="4" max="32" /><span className="max">24</span>
+        <span className="min">4</span><input id="slider" name="length" type="range" min="4" max="24"value={length}
+          onChange={(e) => setLength(parseInt(e.target.value))} /><span className="max">24</span>
       </div>
       <div className="toggle-buttons">
         <label>
-          <span>Include Uppercase</span>
+          <span>Include UpperCasecase</span>
           <ToggleSwitch
-            checked={upper}
+            checked={upperCase}
             onChange={(e) => {
-              setUpper(e);
+              setUpperCase(e);
             }}
           />
         </label>
         <label>
-          <span>Include Lowercase</span>
+          <span>Include LowerCasecase</span>
           <ToggleSwitch
-            checked={lower}
+            checked={lowerCase}
             onChange={(e) => {
-              setLower(e);
+              setLowerCase(e);
             }}
           />
         </label>
@@ -46,17 +65,17 @@ const PasswordGenerator = () => {
           />
         </label>
         <label>
-          <span>Include Symbol</span>
+          <span>Include specialChar</span>
           <ToggleSwitch
-            checked={symbol}
+            checked={specialChar}
             onChange={(e) => {
-              setSymbol(e);
+              setSpecialChar(e);
             }}
           />
         </label>
       </div>
       <div className="gen-btn">
-        <button>Generate Password</button>
+        <button onClick={handleSubmit}>Generate Password</button>
       </div>
     </div>
   );
