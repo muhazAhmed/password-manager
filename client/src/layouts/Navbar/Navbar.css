@@ -1,6 +1,7 @@
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 15rem;
     align-items: center;
     padding: 10px;
     font-size: large;
