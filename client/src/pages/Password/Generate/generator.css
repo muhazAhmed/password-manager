@@ -19,6 +19,11 @@
     text-align: center;
     font-size: 3rem;
   }
+
+  .out-pass{
+    display: flex;
+    flex-direction: column;
+  }
   
   .out-pass h2{
     text-align: center;
@@ -30,6 +35,16 @@
     border: 3px solid var(--header);
     border-radius: 12px;
     padding: 18px 100px;
+  }
+
+  .out-pass h3 i{
+    position: relative;
+    left: 95px;
+    cursor: pointer;
+  }
+
+  .out-pass h3 i:hover{
+    color: #3498db;
   }
 
   .pass-right{
