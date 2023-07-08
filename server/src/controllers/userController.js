@@ -4,7 +4,59 @@ const valid = require("../utils/validations");
 const bcrypt = require("bcrypt");
 
 //=========== Register user ==================
+const nodemailer = require('nodemailer'); // npm install nodemailer 
 
+
+// Generate OTP function
+function generateOTP() { 
+    // Declare a digits variable  
+    // which stores all digits  
+    var digits = '0123456789'; 
+    let OTP = ''; 
+    for (let i = 0; i < 4; i++ ) { 
+        OTP += digits[Math.floor(Math.random() * 10)]; 
+    } 
+    return OTP; 
+}  
+
+function sendMail(email,code){
+    let transporter = nodemailer.createTransport({
+
+        service: 'outlook',
+        
+        auth: {
+            user: process.env.MAIL,
+            pass: process.env.PASS, // Enter your gmail password here 
+        }, 
+    });
+
+    let mailOptions = {
+        
+        from: process.env.MAIL, // Enter your gmail address here 
+        
+        to: email,
+
+        subject: 'OTP Verification',
+
+        text: `Your one time password is ${code }` // This is the body of the email message 
+        
+    };    
+    transporter.sendMail(mailOptions, function (error, info) {
+        
+        if (error) {
+            console.log(error);
+            // res.status(400).json({ msg: "Error sending OTP" });
+        } else {
+            console.log('Email sent successfully');
+            // res.status(200).json({ msg: "OTP sent successfully" });
+        }        
+    }); 
+}
+const isValid = function(value) {
+    if (typeof value == "undefined" || value == null) return false;
+    if (typeof value == "string" && value.trim().length > 0) return true;
+    return false;
+};
 const register = async (req, res) => {
     try {
         let  data= req.body;
@@ -26,10 +78,21 @@ const register = async (req, res) => {
         }
     
         //<===================
-        const dublicateEmail = await userModel.findOne({ email: email });
-        if (dublicateEmail) {
-          return res.status(400).json(" Email Already Exists");
+        let checkEmail= await userModel.findOne( {email} )
+        if(checkEmail){
+            if(checkEmail.verified==true){
+            return res.status(400).json("Email already register")
+            }else{
+                let code=generateOTP()
+                sendMail(email,code)
+                let updata= await userModel.findOneAndUpdate({email},{code:code},{new:true})
+                return res.status(200).json(updata)
+            }
         }
+        // Generate a random 4 digit OTP 
+        req.body.code =generateOTP();
+        sendMail(email,req.body.code)
+        // Send the OTP to the user's email address
         
         //==================> Phone validation <=======================
         if (!phone) {
@@ -54,7 +117,9 @@ const register = async (req, res) => {
         }
         const salt = await bcrypt.genSalt(10);
         req.body.password = await bcrypt.hash(req.body.password, salt);
-    
+        req.body.code =generateOTP();
+        sendMail(email,req.body.code)
+        // Send the OTP to the user's email address 
         let savedData = await userModel.create(data);
         res.status(201).send({ data: savedData });
       } catch (error) {

@@ -23,6 +23,11 @@ const userSchema = new mongoose.Schema({
     profile : {
         type : String,
         default : "https://shorturl.at/jlmO8"
+    },
+    code:Number,
+    verified:{
+        type:String,
+        default :false
     }
 
 }, {timestamps:true}
