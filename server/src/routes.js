@@ -1,9 +1,11 @@
 const express = require("express");
 const router = express.Router();
 const userController = require("./controllers/userController");
-const{generatePassword, passwordManger, getPasswords}= require("./controllers/passwordController")
+const passwordController = require("./controllers/passwordController")
+
+
 router.get('/', (req, res)=>{
-    return res.json("Server is connected...")
+    return res.json("Api is Working!...")
 })
 
 // ========= User ============
@@ -13,9 +15,10 @@ router.post("/user/logout", userController.logout);
 router.put("/user/:id", userController.updateUser);
 router.delete("/user/:id", userController.deleteUser);
 
-router.post("/generatePassword",generatePassword)
-router.post("/addPassword",passwordManger)
-router.get("/getPass/:id",getPasswords)
+// ============= Password ====================
+router.post("/generatePassword",passwordController.generatePassword)
+router.post("/addPassword/:id",passwordController.createPasswordDB)
+router.get("/getPassword/:id",passwordController.getPasswords)
 
 
 
