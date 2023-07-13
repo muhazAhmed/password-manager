@@ -8,7 +8,7 @@ const valid = require("../utils/validations");
 const createPasswordDB = async (req, res) => {
   try {
     let data = req.body;
-    let {userId, siteName,siteLink, password } = data;
+    let {userId, siteName, userName, siteLink, password } = data;
 
     if (!siteName) {
       return res.status(400).json("Please enter Site Name");
@@ -48,6 +48,7 @@ const getPasswords = async (req, res) => {
       return {
         siteName: item.siteName,
         siteLink: item.siteLink,
+        userName: item.userName,
         date: moment(item.createdAt).format("MM/DD/YYYY"),
         decryptedPassword: decryptedPassword,
       };

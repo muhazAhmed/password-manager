@@ -17,7 +17,6 @@ function generateOTP() {
 function sendMail(email, code) {
   let transporter = nodemailer.createTransport({
     service: "outlook",
-
     auth: {
       user: process.env.OUTLOOK_MAIL,
       pass: process.env.OUTLOOK_PASSWORD,
@@ -26,21 +25,28 @@ function sendMail(email, code) {
 
   let mailOptions = {
     from: process.env.OUTLOOK_MAIL,
-
     to: email,
-
     subject: "OTP Verification",
-
-    text: `Your one time password is \n${code}`,
+    html: `
+      <div style="background-color: #f1f1f1; padding: 20px;">
+        <h2 style="color: #333333;">OTP Verification</h2>
+        <p style="color: #555555;">Dear User,</p>
+        <p style="color: #555555;">Your one-time password is:</p>
+        <h3 style="color: #007bff; margin-top: 10px;">${code}</h3>
+        <p style="color: #555555;">Please enter this OTP to proceed with the verification process.</p>
+      </div>
+    `,
   };
+
   transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
-      res.status(400).json("Error sending OTP");
+      console.error("Error sending OTP");
     } else {
-      res.status(200).json("OTP sent successfully");
+      console.log("OTP sent successfully");
     }
   });
 }
+
 
 //=========== Register user ==================
 const register = async (req, res) => {

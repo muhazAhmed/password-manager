@@ -14,6 +14,9 @@ const passwordSchema = new mongoose.Schema({
   siteLink: {
     type: String,
   },
+  userName: {
+    type: String,
+  },
   password: {
     type: String,
     required: true
