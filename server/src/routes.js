@@ -19,6 +19,9 @@ router.delete("/user/:id", userController.deleteUser);
 router.post("/generatePassword",passwordController.generatePassword)
 router.post("/addPassword/:id",passwordController.createPasswordDB)
 router.get("/getPassword/:id",passwordController.getPasswords)
+router.put("/updatePassword/:id",passwordController.updatePassword)
+router.delete("/deletePassword/:id",passwordController.deletePassword)
+
 
 
 
