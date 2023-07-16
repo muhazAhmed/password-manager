@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav data-aos="slide-down">
       <div className="logo">
         <Link to="/">
-          <img src={logo} alt="logo" />
+          <img title="Home" src={logo} alt="logo" />
         </Link>
       </div>
       <ul className="nav-links">
@@ -38,11 +38,19 @@ const Navbar = () => {
         </Link>
       </ul>
       <div className="user-info">
+        {currentUser && (
+          <span title="Online">
+            <i
+              className="fa-solid fa-circle fa-fade"
+              style={{ color: "#1dc228", fontSize: "10px" }}
+            ></i>
+          </span>
+        )}
         <Link
           to="/user/profile/:id/:userName"
           style={{ textDecoration: "none" }}
         >
-          <span title="profile">{currentUser?.User.firstname}</span>
+          <span title="Profile">{currentUser?.User.firstname}</span>
         </Link>
 
         {currentUser ? (

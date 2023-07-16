@@ -10,6 +10,14 @@
     color: #fff;
 }
 
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    padding-top: 110px;
+}
+
 /* Colors  */
 :root {
     --main: #141414;
@@ -27,10 +35,11 @@ input::-webkit-inner-spin-button {
 }
 
 
-.app h1{
+.app h1 {
     color: var(--header);
 }
-.error p{
+
+.error p {
     color: var(--red);
 }
 

@@ -29,8 +29,8 @@ const createPasswordDB = async (req, res) => {
       process.env.dcryptPassword
     ).toString();
 
-    const savedData = await passwordModel.create(data);
-    return res.status(201).json(savedData);
+    await passwordModel.create(data);
+    return res.status(201).json("Password created successfully");
   } catch (error) {
     return res.status(500).json(error.message);
   }
@@ -50,6 +50,7 @@ const getPasswords = async (req, res) => {
       decryptedPassword = bytes.toString(CryptoJS.enc.Utf8);
 
       return {
+        id: item._id,
         siteName: item.siteName,
         siteLink: item.siteLink,
         userName: item.userName,
@@ -109,18 +110,20 @@ const generatePassword = async (req, res) => {
 
 const updatePassword = async (req, res) => {
   try {
-    if (req.body.siteLink) {
+    let data = req.body;
+    let { siteName, siteLink, userName, password } = data;
+    if (siteLink) {
       if (!valid.isValidURL(siteLink)) {
         return res.status(400).json("Please enter valid link");
       }
     }
-    if (req.body.password) {
+    if (password) {
       req.body.password = CryptoJS.AES.encrypt(
         password,
         process.env.dcryptPassword
       ).toString();
     }
-    let saveData = await passwordModel.findByIdAndUpdate(req.params.id, req.body);
+    await passwordModel.findByIdAndUpdate(req.params.id, data);
     return res.status(200).json("Successfully updated");
   } catch (error) {
     return res.status(500).json(error.message);

@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import "./generator.css";
 import { ToggleSwitch } from "react-dragswitch";
 import "react-dragswitch/dist/index.css";
-import usePostAPI from "../../../util/util.services";
+import {usePostAPI} from "../../../util/util.services";
 import { ServerVariables } from "../../../util/ServerVariables";
 import Loading from "../../../components/Loading/Loading";
 import svg from "../../../assets/images/Eyes.svg";
@@ -53,7 +53,7 @@ const PasswordGenerator = () => {
             {data}{" "}
             {openIcon && (
               <i
-                title="copy"
+                title="Copy to clipboard"
                 className="fa-regular fa-clipboard"
                 onClick={handleCopyPassword}
               ></i>

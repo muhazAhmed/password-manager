@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import "./Form.css";
 import { Link, useNavigate } from "react-router-dom";
 import classnames from "classnames";
-import { usePostAPI } from "../../../util/util.services";
 import { ServerVariables } from "../../../util/ServerVariables";
 import wallapaer from "../../../assets/images/form.svg";
 import Loading from "../../../components/Loading/Loading";
 import Popup from "../../../components/pop-up/Popup";
+import {usePostAPI} from "../../../util/util.services"
 
 const Register = () => {
-  const { data, error, postData } = usePostAPI();
+  const { data, error, loading, postData } = usePostAPI();
   const [inputs, setInputs] = useState({
     firstname: "",
     lastname: "",

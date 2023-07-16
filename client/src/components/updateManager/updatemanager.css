@@ -1,0 +1,78 @@
+.update-passowrd {
+    padding: 40px 100px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.update-passowrd .up-body {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.up-body h2 {
+    background-color: #fff;
+    color: var(--header);
+}
+
+.up-data {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: #fff;
+}
+
+.up-data input {
+    border: none;
+    background-color: #fff;
+    border-bottom: 2px solid black;
+    color: black;
+    padding: 10px 10px;
+}
+
+.up-data input:focus {
+    outline: none;
+}
+
+.update-passowrd button {
+    margin-top: 1rem;
+    border: none;
+    background-color: var(--header);
+    padding: 12px 35px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.update-passowrd button:hover {
+    background-color: blueviolet;
+}
+
+#cancle {
+    background-color: #fff;
+    border: 2px solid var(--red);
+    color: var(--red);
+    transition: 0.3s;
+}
+
+#cancle:hover {
+    background-color: var(--gray);
+    border: 2px solid var(--gray);
+}
+
+.up-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #fff;
+}

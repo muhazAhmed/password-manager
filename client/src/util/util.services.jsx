@@ -1,12 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { API_URL } from "../assets/API/API_URL";
 
-// url :- gets passed from pages => ServerVariables.jsx
-
-//=============== postMethodAPI =================
-
-const usePostAPI = () => {
+export const usePostAPI = () => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -28,18 +24,12 @@ const usePostAPI = () => {
   return { data, error, loading, postData, setError };
 };
 
-
-export default usePostAPI;
-
-
-//=============== getMethodAPI =================
-
-const useFetchAPI = (url) => {
+export const useFetchAPI = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const fetchData = async () => {
+  const fetchData = async (url) => {
     setLoading(true);
 
     try {
@@ -53,13 +43,48 @@ const useFetchAPI = (url) => {
     setLoading(false);
   };
 
-  useEffect(() => {
-    fetchData();
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [url]);
-
-  return { data, loading, error };
+  return { data, loading, error, fetchData };
 };
 
-export { usePostAPI, useFetchAPI };
+export const usePutAPI = () => {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const updateData = async (url, inputs) => {
+    setLoading(true);
+
+    try {
+      const res = await axios.put(API_URL + url, inputs);
+      setData(res.data);
+      setError(null);
+    } catch (err) {
+      setError(err.response.data);
+    }
+
+    setLoading(false);
+  };
+
+  return { data, error, loading, updateData, setError };
+};
+
+export const useDeleteAPI = () => {
+  const [Data, setData] = useState(null);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const deleteData = async (url) => {
+    setLoading(true);
+    try {
+      const res = await axios.delete(API_URL + url);
+      setData(res.data);
+      setError(null);
+    } catch (err) {
+      setError(err.response.data);
+    }
+
+    setLoading(false);
+  };
+
+  return { Data, error, loading, deleteData, setError };
+};

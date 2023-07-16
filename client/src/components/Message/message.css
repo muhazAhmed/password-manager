@@ -1,0 +1,17 @@
+.msg-pop {
+    position: fixed;
+    z-index: 100;
+    left: 75rem;
+    background-color: #fff;
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 12px;
+    width: 20vw;
+    height: 6vh;
+    top: 70px;
+  }
+
+.msg-body, .msg-body h4{
+    background-color: #fff;
+    color: var(--red);
+}

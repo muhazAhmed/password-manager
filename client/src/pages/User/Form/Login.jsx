@@ -3,12 +3,10 @@ import "./login.css";
 import { Link, useNavigate } from "react-router-dom";
 import classnames from "classnames";
 import wallapaer from "../../../assets/images/form.svg";
-import { usePostAPI } from "../../../util/util.services";
 import { AuthContext } from "../../../util/AuthContext";
 import Loading from "../../../components/Loading/Loading";
 
 const Login = () => {
-  const { loading } = usePostAPI(); // custom hook
   const [inputs, setInputs] = useState({
     email: "",
     password: "",
