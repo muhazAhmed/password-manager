@@ -9,7 +9,6 @@ import ContactUs from './pages/Main/ContactUs/ContactUs'
 import ProtectedRoute from './util/ProtectiveRoutes'
 import Dashboard from './pages/Password/Dashboard/Dashboard'
 import Profile from './components/Profile-model/Profile'
-import PageNotFound from "./pages/Main/404/PageNotFound";
 import ProVersion from "./pages/Main/ProVersion/ProVersion";
 import PasswordGenerator from "./pages/Password/Generate/PasswordGenerator";
 
@@ -33,7 +32,7 @@ function App() {
         <Route path='/user/profile/:id/:userName' element={<ProtectedRoute><Profile/></ProtectedRoute>} />
         {/* <Route path='/user/settings/:id' element={<ProtectedRoute><Settings/></ProtectedRoute>} /> */}
 
-        <Route path='*' element={<PageNotFound/>} />
+        <Route path='*' element={<Home/>} />
       </Routes>
     </BrowserRouter>
     </div>

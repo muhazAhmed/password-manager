@@ -10,6 +10,7 @@ router.get('/', (req, res)=>{
 
 // ========= User ============
 router.post("/user/register", userController.register);
+router.get("/user/fetch/:id", userController.fetchUser);
 router.post("/user/login", userController.loginUser);
 router.post("/user/logout", userController.logout);
 router.put("/user/:id", userController.updateUser);

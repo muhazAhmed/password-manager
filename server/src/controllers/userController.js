@@ -47,7 +47,6 @@ function sendMail(email, code) {
   });
 }
 
-
 //=========== Register user ==================
 const register = async (req, res) => {
   try {
@@ -119,7 +118,7 @@ const register = async (req, res) => {
     req.body.password = await bcrypt.hash(req.body.password, salt);
     req.body.code = generateOTP();
     sendMail(email, req.body.code);
-    
+
     let savedData = await userModel.create(data);
     res.status(201).send({ data: savedData });
   } catch (error) {
@@ -185,27 +184,11 @@ const updateUser = async (req, res) => {
       if (!valid.isValidEmail(email)) {
         return res.status(400).json("Email is invalid");
       }
-
-      //========= Checking for duplicate email  ===========
-      const dublicateEmail = await userModel.findOne({
-        where: { email: email },
-      });
-      if (dublicateEmail) {
-        return res.status(400).json(" Email Already Exists");
-      }
     }
 
     if (phone) {
       if (!valid.isValidMobile(phone)) {
         return res.status(400).json("Phone number is invalid");
-      }
-
-      //========= Checking for duplicate phone  ===========
-      const dublicatePhone = await userModel.findOne({
-        where: { phone: phone },
-      });
-      if (dublicatePhone) {
-        return res.status(400).json(" Phone number Already Exists");
       }
     }
 
@@ -224,9 +207,7 @@ const updateUser = async (req, res) => {
     }
 
     await userModel.updateOne({ _id: req.params.id }, { $set: data });
-    return res
-      .status(200)
-      .json("You have recently updated your " + Object.keys(data));
+    return res.status(200).json("Profile has been updated successfully");
   } catch (error) {
     return res.status(500).json(error.message);
   }
@@ -249,4 +230,14 @@ const deleteUser = async (req, res) => {
   }
 };
 
-module.exports = { register, loginUser, logout, deleteUser, updateUser };
+//==================> Delete user <=======================
+const fetchUser = async (req, res) => {
+  try {
+    let getData = await userModel.findById({ _id: req.params.id });
+    return res.status(200).json(getData);
+  } catch (error) {
+    return res.status(500).json(error.message);
+  }
+};
+
+module.exports = { register, loginUser, logout, deleteUser, updateUser, fetchUser };

@@ -1,0 +1,152 @@
+.profile {
+    padding: 10px 10px;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.profile-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-cont,
+.profile-header,
+.profile-body,
+.profile-left,
+.profile-right,
+.profile-input,
+.profile-btns {
+    background-color: #fff;
+}
+
+.profile-header {
+    height: 10vh;
+    width: 45vw;
+    text-align: center;
+    border-bottom: 3px solid var(--header);
+}
+
+.profile-header h1 {
+    color: var(--header);
+    background-color: #fff;
+    font-size: 40px;
+}
+
+.profile-body {
+    padding: 10px 10px;
+    display: flex;
+    gap: 1rem;
+}
+
+.profile-left {
+    height: 30vh;
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-right: 3px solid var(--header);
+}
+
+.profile-left button {
+    border: none;
+    background-color: var(--header);
+    height: 5vh;
+    width: 9vw;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.profile-left #profile-btn-2 {
+    background-color: var(--red);
+}
+
+.profile-right {
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.profile-right input {
+    border: none;
+    background-color: #fff;
+    width: 15vw;
+    color: black;
+    border-bottom: 1px solid black;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.profile-right input[type="password"] {
+    display: flex;
+    align-items: center;
+    width: 20vw;
+}
+
+.profile-btns button {
+    border: none;
+    background-color: var(--header);
+    padding: 12px 30px;
+    margin-right: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile-btns button:hover {
+    background-color: blueviolet;
+}
+
+.dlete-section {
+    padding-right: 41px;
+    padding-left: 41px;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+    background-color: #fff;
+}
+
+.delete-sec-body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: #fff;
+    gap: 2rem;
+}
+
+.delete-sec-body p {
+    background-color: #fff;
+    color: black;
+}
+
+.delete-sec-body p span {
+    background-color: #fff;
+    color: var(--red);
+}
+
+.dlt-btn {
+    background-color: #fff;
+}
+
+.dlt-btn button {
+    border: none;
+    background-color: var(--red);
+    padding: 12px 30px;
+    margin-right: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
