@@ -56,7 +56,7 @@
 .slider {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 1rem;
 }
 
@@ -165,10 +165,19 @@
 
   .slider h4{
     font-size: 12px;
+    margin-bottom: 1rem;
+  }
+
+  .slider input{
+    width: 50vw;
   }
 
   .pass-svg {
     display: none;
+  }
+
+  .out-pass h3 i{
+    position: absolute;
   }
 
   .pass-right {

@@ -105,7 +105,7 @@ select {
 
     .contact .message form input,
     .contact .message form select {
-        width: 100%;
+        width: 70vw;
         max-width: 80vw;
     }
 
