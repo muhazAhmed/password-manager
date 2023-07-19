@@ -1,13 +1,14 @@
-.contact{
+.contact {
     height: 80vh;
 }
-.contact img{
+
+.contact img {
     width: 100%;
     height: 84vh;
     object-fit: cover;
 }
 
-.conact-body{
+.conact-body {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,11 +18,11 @@
     background-color: transparent;
 }
 
-.conact-body h1{
+.conact-body h1 {
     color: #fff;
 }
 
-.contact .message{
+.contact .message {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,7 +31,8 @@
     background-color: transparent;
 }
 
-.contact .message form input, select{
+.contact .message form input,
+select {
     width: 20vw;
     padding: 10px;
     height: 7vh;
@@ -39,7 +41,7 @@
     border-radius: 10px;
 }
 
-.contact .message form button{
+.contact .message form button {
     border: none;
     cursor: pointer;
     background-color: var(--header);
@@ -47,11 +49,11 @@
     border-radius: 20px;
 }
 
-.contact .message form button:hover{
+.contact .message form button:hover {
     background-color: #a673ff;
 }
 
-.contact .message form textarea{
+.contact .message form textarea {
     border: none;
     resize: none;
     width: 20vw;
@@ -61,20 +63,69 @@
     border-radius: 10px;
 }
 
-.cont-row-1{
+.cont-row-1 {
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
 }
 
-.cont-row-2{
+.cont-row-2 {
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
 }
 
-.main-div{
+.main-div {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* Responsive Styles for max-width: 600px */
+
+@media (max-width: 600px) {
+    .contact {
+        height: auto;
+    }
+
+    .contact img {
+        display: none;
+    }
+
+    .contact h1 {
+        font-size: 25px;
+    }
+
+    .conact-body,
+    .contact .message {
+        bottom: initial;
+        position: static;
+        margin-top: 2rem;
+    }
+
+    .contact .message form input,
+    .contact .message form select {
+        width: 100%;
+        max-width: 80vw;
+    }
+
+    .contact .message form button {
+        padding: 13px 100px;
+        margin-top: 1rem;
+    }
+
+    .contact .message form textarea {
+        width: 100%;
+        max-width: 80vw;
+        height: 10vh;
+    }
+
+    .cont-row-1,
+    .cont-row-2 {
+        flex-direction: column;
+    }
+
+    .main-div {
+        text-align: center;
+    }
 }

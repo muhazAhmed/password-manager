@@ -89,3 +89,34 @@
 .card-body input {
   border: none;
 }
+
+/* Responsive Styles for max-width: 600px */
+
+@media (max-width: 600px) {
+  .dash-main {
+    top: 80px;
+  }
+
+  .card-container-wrapper {
+    margin-top: 9rem;
+  }
+
+  .add-pass button {
+    padding: 13px 13px;
+  }
+
+  .card-container {
+    width: 90vw;
+    height: auto;
+  }
+
+  .card-body p {
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .card-body i {
+    margin-top: 0.5rem;
+  }
+}

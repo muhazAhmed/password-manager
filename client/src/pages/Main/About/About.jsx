@@ -1,10 +1,10 @@
 import React from 'react'
-import UpdateManager from '../../../components/updateManager/UpdateManager'
+import "./About.css"
 
 const About = () => {
   return (
     <div>
-      <UpdateManager/>
+    About page
     </div>
   )
 }

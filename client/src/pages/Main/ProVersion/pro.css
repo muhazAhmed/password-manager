@@ -82,3 +82,28 @@
 .subscription .xtra-div h3{
     background-color: transparent;
 }
+
+/* Responsive Styles for max-width: 600px */
+
+@media (max-width: 600px) {
+    .subscription{
+        gap: 2rem;
+    }
+    .outer-div {
+      flex-direction: column;
+    }
+
+    .subscription h1{
+        font-size: 50px;
+    }
+  
+    .subscription .xtra-div {
+      top: 0;
+      padding: 20px;
+    }
+  
+    .subscription .xtra-div .price-1 {
+      bottom: initial;
+    }
+  }
+  

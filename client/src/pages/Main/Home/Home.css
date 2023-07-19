@@ -1,60 +1,92 @@
 .home {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-around;
-    height: 80vh;
-    overflow: hidden;
-  }
-  
-  .wallpaper img{
-    width: 40vw;
-    height: 100%;
-    object-fit: contain;
-  }
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
+  height: 80vh;
+  overflow: hidden;
+}
 
-  .left-cont{
-    display: flex;
+.wallpaper img {
+  width: 40vw;
+  height: 100%;
+  object-fit: contain;
+}
+
+.left-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.left-cont h1 {
+  font-size: 40px;
+}
+
+.left-cont p {
+  font-size: larger;
+  color: var(--shadow);
+}
+
+.left-cont button {
+  border: none;
+  background-color: var(--header);
+  padding: 13px 60px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+.left-cont button:hover {
+  padding: 13px 80px;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 10px;
+}
+
+.footer p,
+span {
+  color: gray;
+}
+
+.footer span {
+  font-size: 1rem;
+}
+
+/* ========== Responsive  Code ======== */
+@media (max-width: 600px) {
+  .home {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+    height: auto;
+    margin-top: 1rem;
   }
 
-  .left-cont h1{
-    font-size: 40px;
+  .home h1{
+    font-size: 25px;
   }
 
-  .left-cont p{
-    font-size: larger;
-    color: var(--shadow);
+  .home p{
+    font-size: 12px;
   }
 
-  .left-cont button{
-    border: none;
-    background-color: var(--header);
-    padding: 13px 60px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 17px;
-    transition: 0.3s;
-  }
-  
-  .left-cont button:hover{
-    padding: 13px 80px;
-  }
-  
-  .footer{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 10px;
+  .wallpaper img {
+    display: none;
   }
 
-  .footer p, span{
-    color: gray;
+  .left-cont button {
+    font-size: 15px;
+    padding: 12px 30px;
   }
 
-  .footer span{
-    font-size: 1rem;
+  .footer {
+    margin-top: 2rem;
+    font-size: 7px;
   }
+}

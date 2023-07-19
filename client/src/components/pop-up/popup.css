@@ -48,11 +48,11 @@
     font-weight: 300;
 }
 
-.otp-verify{
+.otp-verify {
     background-color: #fff;
 }
 
-.otp-verify button{
+.otp-verify button {
     background-color: var(--header);
     padding: 18px 35px;
     border-radius: 12px;
@@ -63,4 +63,29 @@
 
 .otp-verify button:hover {
     background-color: #a673ff;
+}
+
+/* Responsive Styles for max-width: 600px */
+
+@media (max-width: 600px) {
+    .popup {
+        padding: 20px;
+        top: 2%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .popup .otp-container {
+        margin: 20px 0;
+    }
+
+    .otp-code {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .otp-verify button {
+        padding: 12px 25px;
+    }
 }
