@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import "./login.css";
+import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import classnames from "classnames";
 import wallapaer from "../../../assets/images/form.svg";
@@ -56,7 +56,7 @@ const Login = () => {
       </div>
       {redirecting && <Loading />}
       <div className="xtra-div" data-aos="zoom-out">
-        <div className="form-right">
+        <div className="login-right">
           <form>
             <h1>Login</h1>
             <input

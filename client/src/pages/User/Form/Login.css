@@ -1,21 +1,22 @@
-.form{
+.form {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-.form .wallpaper img{
+
+.form .wallpaper img {
     width: 40vw;
     height: 76vh;
 }
 
-.form .xtra-div{
+.form .xtra-div {
     border-top: 3px solid var(--header);
     border-bottom: 3px solid var(--header);
     border-radius: 10px;
     padding: 13px 10px;
 }
 
-.form-right form{
+.login-right form {
     gap: 1rem;
     display: flex;
     flex-direction: column;
@@ -25,14 +26,14 @@
     border-radius: 12px;
 }
 
-.form-right form input{
+.login-right form input {
     border: none;
     border-bottom: 1px solid var(--header);
     width: 20rem;
     padding: 10px;
 }
 
-.form-right .form-row i{
+.login-right .form-row i {
     position: relative;
     right: 35px;
     cursor: pointer;
@@ -40,11 +41,11 @@
     font-weight: 100;
 }
 
-.form-right form input:focus {
+.login-right form input:focus {
     outline: none !important;
 }
 
-.form-right form button{
+.login-right form button {
     border: none;
     background-color: var(--header);
     padding: 10px 60px;
@@ -53,10 +54,39 @@
     transition: 0.3s;
 }
 
-.form-right form button:hover{
+.login-right form button:hover {
     padding: 10px 70px;
 }
 
-.form-right form span{
+.login-right form span {
     color: var(--red);
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+
+    .form .xtra-div {
+        padding: 10px 8px;
+    }
+
+    .form .wallpaper {
+        display: none;
+    }
+
+    .login-right form{
+        padding: 70px 15px;
+    }
+
+    .login-right form input{
+        padding: 8px;
+    }
+
+    .login-right .form-row i {
+        position: absolute;
+        right: 60px;
+    }
+
+    .login-right form {
+        gap: 2rem;
+    }
 }

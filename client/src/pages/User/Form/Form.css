@@ -2,21 +2,21 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-}
-
-.form .wallpaper img {
+  }
+  
+  .form .wallpaper img {
     width: 40vw;
     height: 76vh;
-}
-
-.form .xtra-div {
+  }
+  
+  .form .xtra-div {
     border-top: 3px solid var(--header);
     border-bottom: 3px solid var(--header);
     border-radius: 10px;
     padding: 13px 10px;
-}
-
-.form-right form {
+  }
+  
+  .form-right form {
     gap: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -24,71 +24,90 @@
     border: 3px solid var(--header);
     padding: 90px 50px;
     border-radius: 12px;
-}
-
-.form-right form input:focus {
+  }
+  
+  .form-right form input:focus {
     outline: none !important;
-}
-
-.form-right form .form-row input[type=password] {
+  }
+  
+  .form-right form .form-row input[type=password] {
     padding-right: 50px;
-}
-
-.form-right form .form-row {
+  }
+  
+  .form-right form .form-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-}
-
-.form-right form .form-row input {
+  }
+  
+  .form-right form .form-row input {
     border: none;
     border-bottom: 1px solid var(--header);
     width: 12rem;
     padding: 10px;
-}
-
-.form-right form .form-row input[type="password"] {
+  }
+  
+  .form-right form .form-row input[type="password"] {
     width: 20rem;
-}
-
-.form-right form .form-row .text-input {
-  width: 12rem;
-}
-
-.form-right form .form-row .password-input {
-  width: 20rem;
-}
-
-
-.form-right .form-row i{
+  }
+  
+  .form-right .form-row i {
     position: relative;
     right: 35px;
     cursor: pointer;
     color: var(--header);
     font-weight: 100;
-}
-
-.form-right form button {
+  }
+  
+  .form-right form button {
     border: none;
     background-color: var(--header);
     padding: 10px 60px;
     border-radius: 20px;
     cursor: pointer;
     transition: 0.3s;
-}
-
-.form-right form button:hover {
+  }
+  
+  .form-right form button:hover {
     padding: 10px 70px;
-}
-
-.form-right form span {
+  }
+  
+  .form-right form span {
     color: var(--red);
-}
-
-.error {
+  }
+  
+  .error {
     color: var(--red);
     border-top: 1px solid var(--red);
     border-bottom: 1px solid var(--red);
     padding: 10px;
-}
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 768px) {
+  
+    .form .wallpaper {
+        display: none;
+    }
+  
+    .form-right form {
+      padding: 50px 35px;
+    }
+  
+    .form-right form .form-row input[type="password"] {
+      width: 100%;
+      padding-right: 0;
+    }
+  
+    .form-right form .form-row input,
+    .form-right form .form-row .text-input,
+    .form-right form .form-row .password-input {
+      width: 100%;
+    }
+  
+    .form-right form button {
+      padding: 10px 40px;
+    }
+  }
+  
