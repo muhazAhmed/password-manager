@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./Popup.css";
+import "./popup.css";
 
 const Popup = () => {
   const email = "muhaz@gmail.com";
