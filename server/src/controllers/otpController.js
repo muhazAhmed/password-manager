@@ -11,12 +11,12 @@ let verifyOtp = async (req, res) => {
     if (verifiedOtp) {
       (verifiedOtp.code = null), (verifiedOtp.verified = true);
       verifiedOtp.save();
-      res.json("verified");
+      return res.json("verified");
     } else {
-      res.status(400).json("otp is incorrect");
+      return res.status(400).json("otp is incorrect");
     }
   } catch (error) {
-    res.status(500).json(error.message);
+    return res.status(500).json(error.message);
   }
 };
 

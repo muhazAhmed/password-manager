@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Profile.css";
 import { AuthContext } from "../../util/AuthContext";
 import { useFetchAPI, usePutAPI } from "../../util/util.services";
@@ -111,7 +112,9 @@ const Profile = () => {
                 </div>
                 <div className="profile-btns">
                   <button onClick={handleSubmit}>Update</button>
-                  <button id="cancle">Cancle</button>
+                  <Link to="/user/dashboard" style={{ backgroundColor: "#fff" }}>
+                    <button id="cancle">Cancle</button>
+                  </Link>
                 </div>
               </div>
             ) : (

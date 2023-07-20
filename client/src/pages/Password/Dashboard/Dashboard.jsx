@@ -134,15 +134,15 @@ const Dashboard = () => {
 
                     <div style={{ display: "flex", gap: "1rem" }}>
                       <i
-                        className={classNames("fa", {
-                          "fa-eye": !showPassword,
-                          "fa-eye-slash": showPassword,
+                        className={classNames("fas", {
+                          "fas-eye": !showPassword,
+                          "fas-eye-slash": showPassword,
                         })}
                         onClick={togglePasswordVisibility}
                       ></i>
                       <i
                         title="Copy to clipboard"
-                        className="fa-regular fa-clipboard"
+                        className="fas fa-clipboard"
                         onClick={() =>
                           handleCopyPassword(item.decryptedPassword)
                         }

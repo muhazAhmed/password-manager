@@ -231,38 +231,38 @@
   }
 
   .text-L {
-    left: 1rem;
+    left: 2rem;
     animation: text-L 1050ms ease-in infinite;
   }
   
   .text-o {
-    left: 3rem;
+    left: 4rem;
     animation-delay: 150ms;
   }
   
   .text-a {
-    left: 5.5rem;
+    left: 6.5rem;
     animation-delay: 230ms;
   }
   
   .text-d {
-    left: 8rem;
+    left: 9rem;
     animation-delay: 310ms;
   }
   
   .text-i {
-    left: 10.5rem;
+    left: 11.5rem;
     animation-delay: 390ms;
   }
   
   .text-n {
   
-    left: 12rem;
+    left: 13rem;
     animation-delay: 470ms;
   }
   
   .text-g {
-    left: 14rem;
+    left: 15.5rem;
     animation-delay: 550ms;
   }
   

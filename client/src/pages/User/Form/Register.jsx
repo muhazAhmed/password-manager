@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Form.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import classnames from "classnames";
 import { ServerVariables } from "../../../util/ServerVariables";
 import wallapaer from "../../../assets/images/form.svg";
@@ -15,20 +15,22 @@ const Register = () => {
     lastname: "",
     email: "",
     phone: "",
-    password: ""
+    password: "",
+    code : "",
+    verified : "",
   });
   const [showPassword, setShowPassword] = useState(false);
-  const [redirecting, setRedirecting] = useState(false); // Added state for redirecting
   const [model, setModel] = useState(false); // Added state for popup model
 
-  const navigate = useNavigate();
+  const handleSubmit= (e) => {
+    e.preventDefault();
+
+    postData(ServerVariables.Register, inputs)
+    setModel(true);
+  }
 
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const openModel =  () => {
-    setModel(true)
   };
 
   // Check if all input fields are filled
@@ -103,13 +105,13 @@ const Register = () => {
               />
               <i
                 className={classnames("fa", {
-                  "fa-eye": !showPassword,
-                  "fa-eye-slash": showPassword
+                  "fas-eye": !showPassword,
+                  "fas-eye-slash": showPassword
                 })}
                 onClick={togglePasswordVisibility}
               ></i>
             </div>
-            <button onClick={openModel} disabled={!isFormValid()}>
+            <button onClick={handleSubmit} disabled={!isFormValid()}>
               Sign-Up
             </button>
             <p className="form-footer">
@@ -119,7 +121,7 @@ const Register = () => {
               </Link>
             </p>
             {error && <p className="error">{error}</p>}
-            {redirecting && <Loading />}
+            {loading && <Loading />}
           </form>
         </div>
       </div>

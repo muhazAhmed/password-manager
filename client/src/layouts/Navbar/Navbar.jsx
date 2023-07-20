@@ -78,7 +78,7 @@ const Navbar = () => {
         {currentUser && (
           <span title="Online">
             <i
-              className="fa-solid fa-circle fa-fade"
+              className="fas fa-circle fa-fade"
               style={{ color: "#1dc228", fontSize: "10px" }}
             ></i>
           </span>
