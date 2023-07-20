@@ -78,7 +78,8 @@ span {
   }
 
   .wallpaper img {
-    display: none;
+    width: 50vw;
+    height: auto;
   }
 
   .left-cont button {
