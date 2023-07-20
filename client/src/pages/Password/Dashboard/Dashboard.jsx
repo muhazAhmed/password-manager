@@ -119,7 +119,7 @@ const Dashboard = () => {
                       alignItems: "center",
                     }}
                   >
-                    <p>Site URL: </p>
+                    <p>Password </p>
                     <div>
                       <input
                         className={classNames("password-input", {
@@ -134,15 +134,15 @@ const Dashboard = () => {
 
                     <div style={{ display: "flex", gap: "1rem" }}>
                       <i
-                        className={classNames("fas", {
-                          "fas-eye": !showPassword,
-                          "fas-eye-slash": showPassword,
+                        className={classNames("fa", {
+                          "fa-eye": !showPassword,
+                          "fa-eye-slash": showPassword,
                         })}
                         onClick={togglePasswordVisibility}
                       ></i>
                       <i
                         title="Copy to clipboard"
-                        className="fas fa-clipboard"
+                        className="fa-regular fa-clipboard"
                         onClick={() =>
                           handleCopyPassword(item.decryptedPassword)
                         }
