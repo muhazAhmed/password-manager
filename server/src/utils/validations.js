@@ -12,7 +12,7 @@ const isValidimage = function (value) {
 };
 
 const isValidMobile = function (value) {
-  if (/^[0-9]{10}$/.test(value)) return true;
+  if (/([0-9\s\-]{7,})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$/.test(value)) return true;
   return false;
 };
 

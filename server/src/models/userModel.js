@@ -14,15 +14,19 @@ const userSchema = new mongoose.Schema({
     required: true
   },
   phone: {
-    type: Number,
+    type: String,
     required: true
   },
   password: {
     type: String,
     required: true
   },
-  code: {
-    type: Number,
+  otp: {
+    type: String,
+    required: true
+  },
+  otpExpiresAt: {
+    type: Date,
     required: true
   },
   verified: {
