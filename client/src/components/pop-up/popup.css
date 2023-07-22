@@ -52,9 +52,14 @@
     background-color: #fff;
 }
 
+.otp-verify {
+    display: flex;
+    gap: 1rem;
+}
+
 .otp-verify button {
     background-color: var(--header);
-    padding: 18px 35px;
+    padding: 12px 30px;
     border-radius: 12px;
     border: none;
     cursor: pointer;
@@ -75,7 +80,7 @@
         transform: translate(-50%, -50%);
     }
 
-    .otp-header h1{
+    .otp-header h1 {
         font-size: 21px;
         text-align: center;
     }

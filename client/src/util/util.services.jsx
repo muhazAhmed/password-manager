@@ -15,7 +15,9 @@ export const usePostAPI = () => {
       setData(res.data);
       setError(null);
     } catch (err) {
-      setError(err.response.data);
+      setTimeout(() => {
+        setError(err.response.data);
+      }, 3000);
     }
 
     setLoading(false);

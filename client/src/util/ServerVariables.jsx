@@ -6,6 +6,7 @@ export const ServerVariables = {
     Update : "user/:id",
     Delete : "user/:id",
     FetchUser : "user/fetch/:id",
+    VerifyOTP : "user/otp/verify",
 
     // ========= Password ========
     Generate : "generatePassword",

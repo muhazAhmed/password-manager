@@ -2,8 +2,8 @@ import {BrowserRouter, Routes, Route} from "react-router-dom"
 import "./index.css"
 import Navbar from "./layouts/Navbar/Navbar";
 import Home from './pages/Main/Home/Home'
-import Login from './pages/User/Form/Login'
-import Register from './pages/User/Form/Register'
+import Login from './pages/User/login/Login'
+import Register from './pages/User/Register/Register'
 import About from './pages/Main/About/About'
 import ContactUs from './pages/Main/ContactUs/ContactUs'
 import ProtectedRoute from './util/ProtectiveRoutes'
