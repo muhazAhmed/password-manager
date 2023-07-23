@@ -58,5 +58,5 @@ Easy-to-use dashboard with search and sort functionalities.
 <h3 id="contributing">Contributing</h3>
 We welcome contributions to improve the Password Manager and Generator. Feel free to submit bug reports, feature requests, or pull requests to help us enhance the project.
 <br/>
-<h3 id="license">License</h3>
-This project is licensed under the MIT License. See the LICENSE file for more details.
+<h3 id="License">License</h3>
+This project is licensed under the MIT License & all right reserved to <a href="https://github.com/muhazahmed">Muhaz Ahmed</a>. See the LICENSE file for more details.
