@@ -25,7 +25,7 @@ To set up the project on your local machine, follow these steps:<br/>
 bash<br/>
 Copy code<br/>
 # Clone the repository
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/muhazAhmed/password-manager.git
 
 # Navigate to the project directory
 cd your-repo<br/>
