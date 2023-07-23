@@ -55,8 +55,8 @@ Easy-to-use dashboard with search and sort functionalities.
 <h2>Dashboard</h2>
 <img src="https://i.ibb.co/wQq1cZ5/Screenshot-2023-07-20-215753.png" alt="Screenshot-2023-07-20-215753" border="0">
 
-<h3>Contributing</h3>
+<h3 id="contributing">Contributing</h3>
 We welcome contributions to improve the Password Manager and Generator. Feel free to submit bug reports, feature requests, or pull requests to help us enhance the project.
 <br/>
-<h3>License</h3>
+<h3 id="license">License</h3>
 This project is licensed under the MIT License. See the LICENSE file for more details.
