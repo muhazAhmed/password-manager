@@ -2,15 +2,14 @@
 <h3>Description</h3><br/>
 The Password Manager and Generator is a web application that allows users to securely store and manage their passwords and also generate strong passwords for different accounts. It aims to provide a convenient and safe solution for users to handle their login credentials without the need to remember multiple passwords.<br/>
 
-Table of Contents<br/>
-Project URL<br/>
-Technologies<br/>
-Installation<br/>
-Features<br/>
-<a href="#Screenshots">Screenshots<br/></a>
-Contributing<br/>
-License<br/>
-Project URL<br/>
+<h3>Table of Contents</h3><br/>
+<a href="#Project-URL">Project URL</a><br/>
+<a href="#Technologies">Technologies</a><br/>
+<a href="#Installation">Installation</a><br/>
+<a href="#Features">Features</a><br/>
+<a href="#Screenshots">Screenshots</a><br/>
+<a href="#Contributing">Contributing</a><br/>
+<a href="#License">License</a><br/>
 Access the Password Manager and Generator at<br/> https://password-manager-client.onrender.com
 
 Technologies<br/>
