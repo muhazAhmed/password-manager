@@ -1,49 +1,49 @@
-Password Manager and Generator
-Description
-The Password Manager and Generator is a web application that allows users to securely store and manage their passwords and also generate strong passwords for different accounts. It aims to provide a convenient and safe solution for users to handle their login credentials without the need to remember multiple passwords.
+<h1>Password Manager and Generator</h1><br/>
+<h3>Description</h3><br/>
+The Password Manager and Generator is a web application that allows users to securely store and manage their passwords and also generate strong passwords for different accounts. It aims to provide a convenient and safe solution for users to handle their login credentials without the need to remember multiple passwords.<br/>
 
-Table of Contents
-Project URL
-Technologies
-Installation
-Features
-Screenshots
-Contributing
-License
-Project URL
+Table of Contents<br/>
+Project URL<br/>
+Technologies<br/>
+Installation<br/>
+Features<br/>
+Screenshots<br/>
+Contributing<br/>
+License<br/>
+Project URL<br/>
 Access the Password Manager and Generator at<br/> https://password-manager-client.onrender.com
 
-Technologies
-Front-end: React, HTML, CSS
-Back-end: Node.js, Express.js
-Database: MongoDB
-Password Generation: JavaScript
-Other tools: Twilio API, bcrypt, etc.
-Installation
-To set up the project on your local machine, follow these steps:
+Technologies<br/>
+Front-end: React, HTML, CSS<br/>
+Back-end: Node.js, Express.js<br/>
+Database: MongoDB<br/>
+Password Generation: JavaScript<br/>
+Other tools: Twilio API, bcrypt, etc.<br/>
+Installation<br/>
+To set up the project on your local machine, follow these steps:<br/>
 
-bash
-Copy code
+bash<br/>
+Copy code<br/>
 # Clone the repository
 git clone https://github.com/your-username/your-repo.git
 
 # Navigate to the project directory
-cd your-repo
+cd your-repo<br/>
 
 # Install dependencies for both client and server
-cd client
-npm install
+cd client<br/>
+npm install<br/>
 
-cd ../server
-npm install
+cd ../server<br/>
+npm install<br/>
 
 # Start the development server
-cd client
-npm start
+cd client<br/>
+npm start<br/>
 
-cd ../server
-npm start
-Features
+cd ../server<br/>
+npm start<br/>
+Features<br/>
 User authentication and registration with email and phone verification.
 Securely store and manage multiple account passwords.
 Generate strong and unique passwords for different accounts.
@@ -54,10 +54,10 @@ Easy-to-use dashboard with search and sort functionalities.
 <img src="https://i.ibb.co/nkdVjRS/Screenshot-2023-07-20-215245.png" alt="Screenshot-2023-07-20-215245" border="0">
 
 <h2>Dashboard</h2>
-<a href="https://ibb.co/n1ySPqx"><img src="https://i.ibb.co/wQq1cZ5/Screenshot-2023-07-20-215753.png" alt="Screenshot-2023-07-20-215753" border="0"></a>
+<img src="https://i.ibb.co/wQq1cZ5/Screenshot-2023-07-20-215753.png" alt="Screenshot-2023-07-20-215753" border="0">
 
 <h3>Contributing</h3>
 We welcome contributions to improve the Password Manager and Generator. Feel free to submit bug reports, feature requests, or pull requests to help us enhance the project.
-
-License
+<br/>
+<h3>License</h3>
 This project is licensed under the MIT License. See the LICENSE file for more details.
