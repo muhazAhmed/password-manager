@@ -4,15 +4,15 @@ The Password Manager and Generator is a web application that allows users to sec
 
 <h3>Table of Contents</h3><br/>
 <a href="#Project-URL">Project URL</a><br/>
-<a href="#Technologies">Technologies</a><br/>
-<a href="#Installation">Installation</a><br/>
-<a href="#Features">Features</a><br/>
-<a href="#Screenshots">Screenshots</a><br/>
-<a href="#Contributing">Contributing</a><br/>
+<a href="#technologies">Technologies</a><br/>
+<a href="#installation">Installation</a><br/>
+<a href="#features">Features</a><br/>
+<a href="#screenshots">Screenshots</a><br/>
+<a href="#contributing">Contributing</a><br/>
 <a href="#License">License</a><br/>
 Access the Password Manager and Generator at<br/> https://password-manager-client.onrender.com
 
-Technologies<br/>
+<h3 id="technologies">Technologies</h3><br/>
 Front-end: React, HTML, CSS<br/>
 Back-end: Node.js, Express.js<br/>
 Database: MongoDB<br/>
