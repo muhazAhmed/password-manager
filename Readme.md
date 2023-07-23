@@ -7,7 +7,7 @@ Project URL<br/>
 Technologies<br/>
 Installation<br/>
 Features<br/>
-Screenshots<br/>
+<a href="#Screenshots">Screenshots<br/></a>
 Contributing<br/>
 License<br/>
 Project URL<br/>
@@ -49,7 +49,7 @@ Securely store and manage multiple account passwords.
 Generate strong and unique passwords for different accounts.
 Easy-to-use dashboard with search and sort functionalities.
 
-<h3>Screenshots</h3>
+<h3 id="Screenshots">Screenshots</h3>
 <h1>Home Page</h1>
 <img src="https://i.ibb.co/nkdVjRS/Screenshot-2023-07-20-215245.png" alt="Screenshot-2023-07-20-215245" border="0">
 
