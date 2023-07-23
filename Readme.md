@@ -51,7 +51,7 @@ Easy-to-use dashboard with search and sort functionalities.
 
 <h3>Screenshots</h3>
 <h1>Home Page</h1>
-<a href="https://ibb.co/ry8LHvJ"><img src="https://i.ibb.co/nkdVjRS/Screenshot-2023-07-20-215245.png" alt="Screenshot-2023-07-20-215245" border="0"></a>
+<img src="https://i.ibb.co/nkdVjRS/Screenshot-2023-07-20-215245.png" alt="Screenshot-2023-07-20-215245" border="0">
 
 <h2>Dashboard</h2>
 <a href="https://ibb.co/n1ySPqx"><img src="https://i.ibb.co/wQq1cZ5/Screenshot-2023-07-20-215753.png" alt="Screenshot-2023-07-20-215753" border="0"></a>
