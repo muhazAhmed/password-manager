@@ -11,6 +11,7 @@ import Dashboard from './pages/Password/Dashboard/Dashboard'
 import Profile from './components/Profile-model/Profile'
 import ProVersion from "./pages/Main/ProVersion/ProVersion";
 import PasswordGenerator from "./pages/Password/Generate/PasswordGenerator";
+import PageNotFound from "./components/Page Not Found/PageNotFound";
 
 function App() {
   return (
@@ -32,7 +33,9 @@ function App() {
         <Route path='/user/profile/:id/:userName' element={<ProtectedRoute><Profile/></ProtectedRoute>} />
         {/* <Route path='/user/settings/:id' element={<ProtectedRoute><Settings/></ProtectedRoute>} /> */}
 
-        <Route path='*' element={<Home/>} />
+        {/* <Route path='*' element={<PageNotFound/>} /> */}
+        <Route path="/*" element={<Navigate to="/404" />} />
+        <Route path="/404" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
     </div>
